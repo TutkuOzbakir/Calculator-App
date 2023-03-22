@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity(){
                     if(prefix.isNotEmpty()){
                         first = prefix + first
                     }
-                    tvResult?.text = removeZero((first.toDouble() - second.toDouble()).toString())
+                    tvResult?.text = removeZero((first.toBigDecimal() - second.toBigDecimal()).toString())
                 }else if(tv.contains("+")){
                     val value = tv.split("+")
                     var first = value[0]
@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity(){
                     if(prefix.isNotEmpty()){
                         first = prefix + first
                     }
-                    tvResult?.text = removeZero((first.toDouble() + second.toDouble()).toString())
+                    tvResult?.text = removeZero((first.toBigDecimal() + second.toBigDecimal()).toString())
                 }else if(tv.contains("*")){
                     val value = tv.split("*")
                     var first = value[0]
@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity(){
                     if(prefix.isNotEmpty()){
                         first = prefix + first
                     }
-                    tvResult?.text = removeZero((first.toDouble() * second.toDouble()).toString())
+                    tvResult?.text = removeZero((first.toBigDecimal() * second.toBigDecimal()).toString())
                 }else if(tv.contains("/")){
                     val value = tv.split("/")
                     var first = value[0]
@@ -137,7 +137,7 @@ class MainActivity : AppCompatActivity(){
                     if(prefix.isNotEmpty()){
                         first = prefix + first
                     }
-                    tvResult?.text = removeZero((first.toDouble() / second.toDouble()).toString())
+                    tvResult?.text = removeZero((first.toBigDecimal() / second.toBigDecimal()).toString())
                 }
             }catch (e: Exception){
                 e.printStackTrace()
